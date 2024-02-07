@@ -4,13 +4,13 @@ Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da 
 
 ## Indíce
 
-[1. Getting started](#1-getting-started)
-[2. Expressões Aritméticas e Operadores](#2-expressões-aritméticas-e-operadores)
-[2.1 Tipos de Dados (Introdução)](#21-tipos-de-dados-introdução)
-[2.2 Funções Utilitárias](#22-funções-utilitárias)
-[2.2.1 Matemática](#221-matemática)
-[3. Expressões Lógicas e Operadores](#3-expressões-lógicas-e-operadores)
-[3.1 Precedência](#31-precedência)
+- [1. Getting started](#1-getting-started)
+- [2. Expressões Aritméticas e Operadores](#2-expressões-aritméticas-e-operadores)
+- [2.1 Tipos de Dados (Introdução)](#21-tipos-de-dados-introdução)
+- [2.2 Funções Utilitárias](#22-funções-utilitárias)
+- [2.2.1 Matemática](#221-matemática)
+- [3. Expressões Lógicas e Operadores](#3-expressões-lógicas-e-operadores)
+- [3.1 Precedência](#31-precedência)
 
 ## 1. Getting started
 
