@@ -11,6 +11,7 @@ Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da 
 - [2.2.1 Matemática](#221-matemática)
 - [3. Expressões Lógicas e Operadores](#3-expressões-lógicas-e-operadores)
 - [3.1 Precedência](#31-precedência)
+- [4. Variáveis](#4-variáveis)
 
 ## 1. Getting started
 
@@ -77,6 +78,40 @@ Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da 
 - Se ao menos um número for `float` irá retornar `float`
 - A divisão de dois números `int` irá retornar um `float`
 
+### 2.2 Strings
+
+- Armazenam objetos que contém uma cadeia de caracteres
+- Com ela pode ser feita atribuições e comparções também
+
+```python
+>>> s = 'abc'
+>>> t = 'dfg'
+>>> s == t # False
+>>> s != t # True
+>>> s < t # True -> Pois ele compara a ordem alfabética das strings
+>>> s + t # abcdfg
+>>> s * 2 # Funciona somente quando um dos operador é inteiro e ele multiplica a string tornando -> abcabc
+>>> ch = 'b'
+>>> ch in s # True -> Define que o caractere 'ch' contém em 's'
+```
+
+- Operadores que não funcionam com strings:
+
+  - `-`, `/`, `//`, `%`, `**`
+
+- Indexação de strings:
+
+  ```python
+  >>> nome = 'Ryan'
+  >>> nome[0] # Imprime -> R
+  >>> nome[2] # Imprime -> a
+  >>> nome[-1] # Imprime -> n
+  >>> nome[0:2] # Substrings - Imprime -> Ry
+  >>> nome[:3] # Substring pegando do inicio até 3 - Imprime -> Rya
+  >>> nome[-1:] # Substring indicando o valor final até o final - Imprime -> n
+  >>> len(nome) # Imprime -> 4
+  ```
+
 ### 2.2 Funções Utilitárias
 
 #### 2.2.1 Matemática
@@ -86,6 +121,18 @@ Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da 
 | `abs()` | Retorna o valor absoluto de um número            |
 | `min()` | Retorna o valor mínimo um conjunto de valores    |
 | `max()` | Retorna o valor máximo de um conjunto de valores |
+
+#### 2.2.2 Strings
+
+| Função                  | Descrição                                                        |
+| ----------------------- | ---------------------------------------------------------------- |
+| `exemplo.find(s)`       | Retorna o índice que a substring `s` aparece em `exemplo`        |
+| `exemplo.count(s)`      | Retorna a frequência em que a substring `s` aparece em `exemplo` |
+| `exemplo.replace(p, s)` | Substitui a string `p` pela substring `s` em `exemplo`           |
+| `exemplo.capitalize()`  | Substitui o primeiro caractere de `exemplo` em maiúscula         |
+| `exemplo.upper()`       | Transforma toda a string de `exemplo` em maiúscula               |
+| `exemplo.lower()`       | Transforma toda a string de `exemplo` em minúscula               |
+| `exemplo.strip()`       | Remove espaço em branco em excesso                               |
 
 ## 3. Expressões Lógicas e Operadores
 
@@ -144,3 +191,25 @@ Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da 
   | Operadores relacionais - `== != > < >= <=`
   | Operadores lógicos - `and or not`
   °
+
+## 4. Variáveis
+
+```python
+>>> x = 3
+>>> nome = 'Ryan'
+```
+
+- Detalhe para o operador de atribuição: `=`
+- Formato geral: `<variável> = <expressão>`
+- Definição de nome de `a-z`, `A-Z`, underscore (`_`) e exeto para os primeiros caracteres números de `0-9`
+
+**Palavras Reservadas**
+
+```python
+and	as	assert	break	class	continue
+def	del	elif	else	except	exec
+finally	for	from	global	if	import
+in	is	lambda	nonlocal	not	or
+pass	raise	return	try	while	with
+yield	True	False	None
+```
