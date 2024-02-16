@@ -12,6 +12,10 @@ Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da 
 - [3. Expressões Lógicas e Operadores](#3-expressões-lógicas-e-operadores)
 - [3.1 Precedência](#31-precedência)
 - [4. Variáveis](#4-variáveis)
+- [5. Listas, Tuplas](#5-listas-tuplas)
+- [5.1 Listas](#51-listas)
+- [5.2 Tuplas](#52-tuplas)
+- [6. Tipos de Dado](#6-tipos-de-dado)
 
 ## 1. Getting started
 
@@ -82,6 +86,7 @@ Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da 
 
 - Armazenam objetos que contém uma cadeia de caracteres
 - Com ela pode ser feita atribuições e comparções também
+- São imutáveis, ou seja, não é possível alterar caracteres isolados de uma string já criada
 
 ```python
 >>> s = 'abc'
@@ -213,3 +218,131 @@ in	is	lambda	nonlocal	not	or
 pass	raise	return	try	while	with
 yield	True	False	None
 ```
+
+## 5. Listas, Tuplas
+
+### 5.1 Listas
+
+- Uma lista é representado por uma sequência de objetos
+- Estes objetos podem ser de diferentes tipos tais como: `strings`, `numbers`, `floats`, etc.
+- Listas são mutáveis, ao contrário das `strings`
+
+```python
+>>> pets = ['cão', 'gato', 'peixe']
+>>> l = [1, 'ab', [], [1, 2]] # Lista heterogenea
+```
+
+**Operadores**
+
+```python
+>>> pets[0] # retorna a string 'cão'
+>>> l[-1] # retorna o array [1, 2]
+```
+
+Outros operadores: `in`, `not in`, `+`, `*`, `len()`, `min()`, `max()`, `sum()`
+
+### 5.2 Tuplas
+
+- Tuplas são iguais as listas porém são imutáveis
+- Sua criação deve ser usada o parênteses (`()`) ao inves dos colchetes (`[]`)
+
+```python
+>>> dias = ('seg', 'ter', 'qua')
+```
+
+### Funções utilitárias
+
+| Função               | Descrição                                             |
+| -------------------- | ----------------------------------------------------- |
+| `pets.append('cão')` | Inclui um elemento ao final da lista                  |
+| `pets.count()`       | Retorna quantos elementos a lista possui              |
+| `pets.index(2)`      | Retonar o elemento de uma determinada posição passada |
+| `pets.insert(1)`     | Inclui um elemento em uma determinada posição passada |
+
+## 6. Tipos de Dado
+
+- Variáveis em Python não possuem um tipo declaradamente, elas apontam temporariamente para um objeto na memória onde está armazenado o tipo e o valor dos dados
+- Cada dado é armazenado na memória no formato de objetos
+- Cada objeto possui um tipo e um valor
+- Função para indetificar um tipo de uma variável
+  ```python
+  >>> type(3) # retorna 'int'
+  ```
+
+Para tipos inteiros pode ser armazenado valores consideravelmente altos (dependendo da memória do computador), já para `float's` a um limite de até 64 bits
+
+```python
+>>> 2**1024 # retorna 11781361728633673532 ... 53056587776
+>>> 2.0**1024 # retorna ERRO
+```
+
+Em `float's` também os valores são aproximados, e normalmente a depender do tamanho do resultado é usado notação ciêntifica para expressa-lôs
+
+**Conversão Implícita**
+
+- Se em uma expressão houver operandos de diferentes tipos o python irá converter para o que contém os outros
+  - `bool -> int -> float`
+
+```python
+>>> True + 5 # retorna 6
+>>> 3 + 0.35 # retorna 3.35
+```
+
+**Coneversão Explícita**
+
+- Pode ser usado construtores para que seja feita a conversão te tipos explícitamente
+
+```python
+>>> int(3.4) # retorna 3
+>>> float(4) # retorna 4.0
+>>> str(2.74) # retorna '2.74'
+```
+
+## 7. Biblioteca Padrão Python (std)
+
+- A biblioteca padrão do python contém muitas outras funções úteis no dia a dia
+- +200 de módulos formam esta lib
+
+Exemplo de apliações que possuem módulos predefinidos:
+
+- Programação para rede de computadores
+- Programação web
+- Desenvolvimento de GUI
+- Banco de dados
+- Funções matemáticas
+- Gerador de números pseudoaleatórios
+
+**Módulo math**
+
+```python
+>>> import math # import da biblioteca math
+>>> math.sqrt(4) # retorna 2.0
+>>> math.log(8, 2) # retorna 3.0
+```
+
+- Alguma funções deste módulo
+
+| Função         | Descrição                           |
+| -------------- | ----------------------------------- |
+| `sqrt(x)`      | Raíz quadrada de um número          |
+| `ceil(x)`      | Arredonda para o menor inteiro >= x |
+| `floor(x)`     | Arredonda para o maior inteiro <= x |
+| `cos(x)`       | Faz o cálculo do cosseno            |
+| `sen(x)`       | Faz o cálculo do seno               |
+| `log(x, base)` | Faz o log de 'x' na base 'base'     |
+| `pi`           | Constante PI                        |
+| `e`            | Constante e                         |
+
+**Módulo fraction**
+
+- É utilizada para representar frações e trabalhar com números racionais
+
+```python
+>>> import fractions
+>>> a = fractions.Fraction(1, 2)
+>>> b = fractions.Fraction(3, 4)
+>>> a + b # retorna Fraction()
+```
+
+- Algumas vantagens deste módulo é que ele permite exibir valores muito maiores comparado com o tipo `float`
+- Por outro lado o tipo `float` é mais rápido em comparação com o `fractions`
