@@ -1,6 +1,11 @@
 # python-lab
 
+Documentação inicial com alguns conceitos básicos
 Estudos e documentações sobre Python, utilizados na curso Bach. Tecnologia da Informação - Univesp
+
+## Outras documentações
+
+- [Documentação Pyhon intermediária](mid-python.md)
 
 ## Indíce
 
