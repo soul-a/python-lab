@@ -139,3 +139,48 @@ def f (x):
 ```
 
 Quando chamarmos `help(f)` irá nos retornar está primeira linha explicativa
+
+## Estrutura de condição de uma ou duas vias
+
+- Permitem escolher um conjunto de ações
+- Blocos são delimitados por identação
+- As condições são representadas por expressões lógicas ou relacionais
+- Podem conter um, duas ou mais vias
+
+**Seleção de um via**
+
+- Tem o objetivo de testar um condição antes de continuar
+
+```python
+if(condicao):
+  # TODO
+# Continue
+```
+
+**Seleção de duas vias**
+
+- Dois blocos alternativos dependendo da condição
+
+```python
+if(condicao):
+  # TODO
+else:
+  # TODO
+# Continue
+```
+
+**Seleção de três vias ou mais**
+
+- Possibilidade de testar diversas condições com blocos para cada uma delas
+
+```python
+if(condicao1):
+  #todo
+elif(condicao2):
+  #todo
+elif(condicao3):
+  #todo
+else
+  #todo
+#Continue
+```
